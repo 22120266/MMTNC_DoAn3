@@ -1,1 +1,82 @@
-<h1>Hello from Thanh Phong</h1> 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Pipeline Success - MMTNC</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        .status-icon {
+            font-size: 50px;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        .details {
+            margin-top: 1.5rem;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+        .tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="status-icon">✔</div>
+        <h1>Deploy Thành Công!</h1>
+        <p>Hệ thống CI/CD đã tự động Build, Test và Deploy ứng dụng này lên Docker Container thông qua Jenkins.</p>
+        
+        <div class="details">
+            <strong>Thông tin dự án:</strong><br>
+            <span>Môn học: Mạng Máy Tính Nâng Cao</span><br>
+            <span>Đồ án: Số 3 - CI/CD Pipeline</span><br>
+            <span class="tag">Jenkins</span> 
+            <span class="tag">Docker Hub</span> 
+            <span class="tag">Nginx</span>
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.9rem;">
+            Thời gian cập nhật: <span id="time"></span>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('time').innerText = new Date().toLocaleString('vi-VN');
+    </script>
+</body>
+</html>
